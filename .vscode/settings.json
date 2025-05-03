@@ -1,7 +1,10 @@
 {
-  "python.analysis.extraPaths": ["${workspaceFolder}/__pypackages__/3.10/lib"],
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/__pypackages__/3.10/lib",
+    "./__pypackages__/3.13/lib"
+  ],
   "python.autoComplete.extraPaths": [
-    "${workspaceFolder}/__pypackages__/3.10/lib"
+    "${workspaceFolder}/__pypackages__/3.13/lib"
   ],
   "python.analysis.autoImportCompletions": true,
   "peacock.color": "#007fff",
