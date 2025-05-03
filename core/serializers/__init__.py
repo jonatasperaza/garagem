@@ -1,6 +1,6 @@
 from .user import UserSerializer
 from .acessorio import AcessorioSerializer
 from .cor import CorSerializer
-from .marca import MarcaSerializer
 from .categoria import CategoriaSerializer
 from .veiculo import VeiculoSerializer
+from .modelo import ModeloSerializer

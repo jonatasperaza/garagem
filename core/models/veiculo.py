@@ -1,24 +1,20 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Categoria, Cor, Marca
+from core.models import Acessorio, Cor, Modelo
 
 
 class Veiculo(models.Model):
-    marca = models.ForeignKey(
-        Marca,
+
+    modelo = models.ForeignKey(
+        Modelo,
         on_delete=models.CASCADE,
-        verbose_name=_("Marca"),
+        verbose_name=_('Modelo'),
     )
     cor = models.ForeignKey(
         Cor,
         on_delete=models.CASCADE,
-        verbose_name=_("Cor"),
-    )
-    categoria = models.ForeignKey(
-        Categoria,
-        on_delete=models.CASCADE,
-        verbose_name=_("Categoria"),
+        verbose_name=_('Cor'),
     )
     ano = models.PositiveIntegerField(
         verbose_name=_("Ano"),
@@ -34,6 +30,11 @@ class Veiculo(models.Model):
         blank=True,
         default=0.00
     )
+    acessorio = models.ManyToManyField(
+        Acessorio,
+        blank=True,
+        verbose_name=_("Acessórios"),
+    )
 
     def __str__(self):
-        return f'{self.marca} - {self.categoria} - {self.ano} - {self.cor}'
+        return f'{self.id} - {self.cor} - {self.cor} - {self.ano}'
