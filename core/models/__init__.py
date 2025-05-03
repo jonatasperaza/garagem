@@ -3,3 +3,4 @@ from .acessorio import Acessorio
 from .cor import Cor
 from .marca import Marca
 from .categoria import Categoria
+from .veiculo import Veiculo
